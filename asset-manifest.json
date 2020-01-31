@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-social-network/static/css/main.aee7de23.chunk.css",
-    "main.js": "/react-social-network/static/js/main.a560199b.chunk.js",
-    "main.js.map": "/react-social-network/static/js/main.a560199b.chunk.js.map",
-    "runtime~main.js": "/react-social-network/static/js/runtime~main.46477532.js",
-    "runtime~main.js.map": "/react-social-network/static/js/runtime~main.46477532.js.map",
-    "static/js/2.93f40381.chunk.js": "/react-social-network/static/js/2.93f40381.chunk.js",
-    "static/js/2.93f40381.chunk.js.map": "/react-social-network/static/js/2.93f40381.chunk.js.map",
-    "static/js/3.863a9d92.chunk.js": "/react-social-network/static/js/3.863a9d92.chunk.js",
-    "static/js/3.863a9d92.chunk.js.map": "/react-social-network/static/js/3.863a9d92.chunk.js.map",
-    "index.html": "/react-social-network/index.html",
-    "precache-manifest.b2ec7c5a42bb766dc8c8dc90bd70317d.js": "/react-social-network/precache-manifest.b2ec7c5a42bb766dc8c8dc90bd70317d.js",
-    "service-worker.js": "/react-social-network/service-worker.js",
-    "static/css/main.aee7de23.chunk.css.map": "/react-social-network/static/css/main.aee7de23.chunk.css.map",
-    "static/media/lookingForAJob.jpg": "/react-social-network/static/media/lookingForAJob.b5754e99.jpg",
-    "static/media/preloader.svg": "/react-social-network/static/media/preloader.d21abd83.svg",
-    "static/media/userImage.png": "/react-social-network/static/media/userImage.73fb0d96.png"
+    "main.css": "/first-app/static/css/main.aee7de23.chunk.css",
+    "main.js": "/first-app/static/js/main.fb41db51.chunk.js",
+    "main.js.map": "/first-app/static/js/main.fb41db51.chunk.js.map",
+    "runtime~main.js": "/first-app/static/js/runtime~main.fb313715.js",
+    "runtime~main.js.map": "/first-app/static/js/runtime~main.fb313715.js.map",
+    "static/js/2.cbddc00a.chunk.js": "/first-app/static/js/2.cbddc00a.chunk.js",
+    "static/js/2.cbddc00a.chunk.js.map": "/first-app/static/js/2.cbddc00a.chunk.js.map",
+    "static/js/3.863a9d92.chunk.js": "/first-app/static/js/3.863a9d92.chunk.js",
+    "static/js/3.863a9d92.chunk.js.map": "/first-app/static/js/3.863a9d92.chunk.js.map",
+    "index.html": "/first-app/index.html",
+    "precache-manifest.111f467a31fc33fee685257787c6a435.js": "/first-app/precache-manifest.111f467a31fc33fee685257787c6a435.js",
+    "service-worker.js": "/first-app/service-worker.js",
+    "static/css/main.aee7de23.chunk.css.map": "/first-app/static/css/main.aee7de23.chunk.css.map",
+    "static/media/lookingForAJob.jpg": "/first-app/static/media/lookingForAJob.b5754e99.jpg",
+    "static/media/preloader.svg": "/first-app/static/media/preloader.d21abd83.svg",
+    "static/media/userImage.png": "/first-app/static/media/userImage.73fb0d96.png"
   }
 }
