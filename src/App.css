@@ -9,27 +9,8 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
 }
-.nav{
-  grid-area: n; 
-  background-color: hotpink;
 
-}
-
-.header{
-  grid-area: h;
-  background-color: aqua;
-}
-
-.content{
+.app-wrapper-content{
   grid-area: c;
-  background-color: cornflowerblue;
-
-}
-
-.header img{
-  width: 80px;
-}
-
-.content img{
-  height: 150px;
+  background-color: cornflowerblue;  
 }

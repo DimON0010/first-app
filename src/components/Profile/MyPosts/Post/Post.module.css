@@ -1,0 +1,14 @@
+.item{
+  color: black;
+}
+
+.item.active{
+ position: relative;
+}
+
+.item.active img {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  border-radius: 10px;
+}

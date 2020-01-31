@@ -1,0 +1,15 @@
+.content img{
+  width: 100%;
+  height: 100px;
+}
+.descriptionBlock{
+  padding: 10px;
+  background-color: cornsilk;
+}
+.lookingforAJob{
+  width: 100px;
+  height: 100px;
+}
+.socialContact{
+  background-color: aquamarine;
+}
