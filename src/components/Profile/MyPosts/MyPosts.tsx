@@ -1,13 +1,17 @@
 import React from 'react';
 import cls from './MyPosts.module.css';
 import Post from './Post/Post';
-import {Field, reduxForm} from "redux-form";
+import {Field, reduxForm, SubmitHandler} from "redux-form";
 import {maxLengthCreator, required} from "../../../utils/validftors/validators";
 import {Textarea} from "../../common/FormsContols/FormsControls";
+import {PostType} from "../../../types/types";
 
 const maxLength15 = maxLengthCreator(15);
 
-const newPostMessage = (props) => {
+type PropsType = {
+    handleSubmit: SubmitHandler
+}
+const newPostMessage: React.FC<PropsType> = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
@@ -21,12 +25,12 @@ const newPostMessage = (props) => {
 };
 const NewPostMessageRedux = reduxForm({ form: 'myPostMessage' })(newPostMessage);
 
-const MyPosts = React.memo(props => {
-    let addPost = (values) => {
+const MyPosts: React.FC<{addPost: (message: string) => void, posts: Array<PostType>}> = React.memo(props => {
+    let addPost = (values: any) => {
         props.addPost(values.myPostMessage);
     };
 
-    let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>);
+    let postsElements = props.posts.map(p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/>);
 
     return <div className={cls.content}>
         <div>

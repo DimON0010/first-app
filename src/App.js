@@ -4,7 +4,7 @@ import NavbarContainer from './components/Navbar/NavbarContainer';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import Music from './components/Music/Music';
-import {BrowserRouter, Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
@@ -24,31 +24,38 @@ class App extends React.Component {
     }
 
     render() {
-        if(!this.props.initialized) {
-            return <Preloader />
+        if (!this.props.initialized) {
+            return <Preloader/>
         }
         return (
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <NavbarContainer/>
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs'
-                           render={withSuspense(DialogsContainer)}
-                    />
-                    <Route path='/profile/:userId?'
-                           render={() => <ProfileContainer/>}
-                    />
-                    <Route path='/users'
-                           render={() => <UsersContainer/>}
-                    />
-                    <Route path='/news'
-                           render={() => <News/>}/>
-                    <Route path='/settings'
-                           render={() => <Settings/>}/>
-                    <Route path='/music'
-                           render={() => <Music/>}/>
-                    <Route path='/login'
-                           render={() => <Login/>}/>
+                    <Switch>
+                        <Route exact path='/'
+                               render={() => <Redirect to='/profile'/>}
+                        />
+                        <Route path='/dialogs'
+                               render={withSuspense(DialogsContainer)}
+                        />
+                        <Route path='/profile/:userId?'
+                               render={() => <ProfileContainer/>}
+                        />
+                        <Route path='/users'
+                               render={() => <UsersContainer/>}
+                        />
+                        <Route path='/news'
+                               render={() => <News/>}/>
+                        <Route path='/settings'
+                               render={() => <Settings/>}/>
+                        <Route path='/music'
+                               render={() => <Music/>}/>
+                        <Route path='/login'
+                               render={() => <Login/>}/>
+                        <Route path='*'
+                               render={() => <div>404 NOT FOUND</div>}/>
+                    </Switch>
                 </div>
             </div>
         );
@@ -56,20 +63,20 @@ class App extends React.Component {
 }
 
 let mapStateToProps = (state) => ({
-  initialized: state.app.initialized
+    initialized: state.app.initialized
 });
 
-const AppContainer =  compose(
+const AppContainer = compose(
     withRouter,
-    connect(mapStateToProps, {initializeApp}))
-(App);
+    connect(mapStateToProps, {initializeApp}))(App);
 
 
 const SamuraiJSApp = (props) => {
     return <BrowserRouter>
-    <Provider store={store}>
-        <AppContainer/>
-    </Provider>
-</BrowserRouter>};
+        <Provider store={store}>
+            <AppContainer/>
+        </Provider>
+    </BrowserRouter>
+};
 
 export default SamuraiJSApp;
